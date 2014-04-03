@@ -1,0 +1,59 @@
+
+<!-- 
+  Create tabs with an icon and label, using the tabs-positive style. 
+  Each tab's child <nav-view> directive will have its own 
+  navigation history that also transitions its views in and out.
+-->
+<view title="'Hello Mr Dean'">
+  <content has-header="true" has-footer="true">
+
+    <div class="list card">
+
+      <div class="item item-avatar">
+        <img ng-src="img/icons/{{ theEvent.depticon }}" alt="{{ event.value.department }}" />
+        <h2>{{ theEvent.eventName }}</h2>
+        <p>{{ theEvent.startDate }} - {{ theEvent.endDate }}</p>
+      </div>
+
+      <div class="item item-body">
+      	<h3>Description</h3>
+        <p>{{ theEvent.description }}</p>
+        <p>Submitted by:  {{ theEvent.chairName }} on {{ theEvent.dateSubmitted }}.</p>
+        <h3>Location</h3>
+        <address>
+        	Building: {{ theEvent.location.building }}<br>
+        	Street: {{ theEvent.location.street }}<br>
+        	City: {{ theEvent.location.city }}
+        </address>
+        <h3>More Information</h3>
+        <p>Other: {{ theEvent.location.other }}</p>
+        <p>Notes: {{ theEvent.notes }}</p>
+        <p>URL: {{ theEvent.url }}</p>
+        <p>
+          <a href="#" class="subdued">1 Like</a>
+          <a href="#" class="subdued">5 Comments</a>
+        </p>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="#">
+          <i class="icon ion-thumbsup"></i>
+          Like
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-chatbox"></i>
+          Comment
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-share"></i>
+          Share
+        </a>
+      </div>
+
+    </div>
+    <a class="button button-block button-positive" ng-click="deleteEvent(theEvent)">
+      Delete
+    </a>
+    
+  </content>
+</view>

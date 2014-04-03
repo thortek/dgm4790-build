@@ -1,0 +1,93 @@
+/* Your app's CSS, go crazy, make it your own */
+
+.ionic-logo {
+  display: block;
+  margin: 15px auto;
+  width: 96px;
+  height: 96px;
+}
+
+/* Stuff for responsive Cat Videos */
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/*temp styling*/
+.positive-bg span{color:#fff;}
+
+
+/*Add event Department buttons*/
+.depBtn{display: inline-block;margin: 2% 4% 0% 4%;}
+input[type="radio"]{display:none;}
+.at input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/atSprite.png") left top no-repeat;}
+.selectedDept .at input[type="radio"] + label span {background: url("../img/icons/atSprite.png") -92px top no-repeat;}
+
+.dgm input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/dgmSprite.png") left top no-repeat;}
+.selectedDept .dgm input[type="radio"] + label span {background: url("../img/icons/dgmSprite.png") -92px top no-repeat;}
+
+.ca input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/caSprite.png") left top no-repeat;}
+.selectedDept .ca input[type="radio"] + label span {background: url("../img/icons/caSprite.png") -92px top no-repeat;}
+
+.ct input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/ctSprite.png") left top no-repeat;}
+.selectedDept .ct input[type="radio"] + label span {background: url("../img/icons/ctSprite.png") -92px top no-repeat;}
+
+.ist input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/istSprite.png") left top no-repeat;}
+.selectedDept .ist input[type="radio"] + label span {background: url("../img/icons/istSprite.png") -92px top no-repeat;}
+
+.egd input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/egdSprite.png") left top no-repeat;}
+.selectedDept .egd input[type="radio"] + label span {background: url("../img/icons/egdSprite.png") -92px top no-repeat;}
+
+.cs input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/csSprite.png") left top no-repeat;}
+.selectedDept .cs input[type="radio"] + label span {background: url("../img/icons/csSprite.png") -92px top no-repeat;}
+
+.tm input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/tmSprite.png") left top no-repeat;}
+.selectedDept .tm input[type="radio"] + label span {background: url("../img/icons/tmSprite.png") -92px top no-repeat;}
+
+.et input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/etSprite.png") left top no-repeat;}
+.selectedDept .et input[type="radio"] + label span {background: url("../img/icons/etSprite.png") -92px top no-repeat;}
+
+.deptRow{
+	position:relative;
+	min-height:110px;
+}
+.unselectedDept{
+	display:none;
+}
+.selectedDept{
+	position:absolute;
+	top:10px;
+	left:8px;
+}
+.cancel{
+	font-size:2em;
+	position:absolute;
+	top:-14px;
+	left:-12px;
+}
+
+h2 {line-height: 1.3em;}
+
+/*--Menu Icons Styles--*/
+
+.button .icon {
+	vertical-align: initial;
+}
+.list .button-bar .button-positive .icon:before {
+	display: block;
+	line-height: 25px;
+	padding: 4px 0px 0px 0px;
+}
+.list .button-bar a {
+	line-height: 25px;
+}
