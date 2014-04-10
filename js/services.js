@@ -93,14 +93,14 @@ angular.module('starter.services', ['ngResource'])
         // Resource that points directly to all events
         return {
             getEvents : function() {
-                return $resource('http://uvutest.learningcomponents.com/api/events', {});
+                return $resource('http://thortek:goldy53@local.dev:5984/events/_design/v1p0/_rewrite/api/events', {});
             },
             addEvent :  function() {
-                return $resource('http://uvutest.learningcomponents.com/api/addevent');
+                return $resource('http://thortek:goldy53@local.dev:5984/events/_design/v1p0/_rewrite/api/addevent');
             },
             deleteEvent : function(eventID, revID) {
                 console.log(eventID + revID);
-                return $resource('http://uvutest.learningcomponents.com/api/event/:id?rev=:rev', {id:eventID, rev:revID});
+                return $resource('http://thortek:goldy53@local.dev:5984/events/_design/v1p0/_rewrite/api/event/:id?rev=:rev', {id:eventID, rev:revID});
             }
 
         };
