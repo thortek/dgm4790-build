@@ -1,5 +1,9 @@
 /* Your app's CSS, go crazy, make it your own */
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
 .ionic-logo {
   display: block;
   margin: 15px auto;
