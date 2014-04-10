@@ -72,7 +72,7 @@ angular.module('starter.controllers', [])
            }
          });
     };
-}).controller('addEventCtrl', ['$scope', '$resource', 'eventService', function($scope, $resource, eventService){
+}).controller('addEventCtrl', ['$scope', '$resource', 'eventService','$ionicActionSheet','$state', function($scope, $resource, eventService,$ionicActionSheet,$state){
 
   $scope.event = {}; //initiate the empty object that will house data being sent to cloudant.
 
@@ -91,6 +91,23 @@ angular.module('starter.controllers', [])
 
   //Add Event Function
   $scope.submitEvent = function() {
+
+      // Show the action sheet - direct to add another, or home
+      $ionicActionSheet.show({
+          titleText: 'Great! You Added an event!',
+          buttons: [
+              { text: 'Done' },
+              { text: 'Create another event' }
+          ],
+          buttonClicked: function(index) {
+             if(index == 0){
+             $state.go('dean.events', [''], {reload:true});
+             }else{
+             $state.go('dean.addEvent', [''], {reload:true});
+             }
+              return true;
+          }
+      });
 
     //Add the depticon icon based on which department was given example: at-green.png
     if ("department" in $scope.event)
@@ -131,6 +148,10 @@ angular.module('starter.controllers', [])
     console.log($scope.event);                //Log the details about to be sent to the server
     var newEvent = eventService.addEvent();   //Create a $resource that points to our API endpoint
     newEvent.save([], $scope.event);          //POST the data in $scope.event to the Cloudant Server
+
+
+
+
   };
 
   var deptClicked = false;
