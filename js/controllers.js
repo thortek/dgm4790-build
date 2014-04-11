@@ -154,6 +154,9 @@ angular.module('starter.controllers', [])
     $scope.showCancel = false;
   }
 
+  //Edit Mode
+  $scope.editMode = false;
+
 }])
 
 .controller('forceOrder', function ($scope, eventStartDateService) {

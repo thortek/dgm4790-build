@@ -11,24 +11,24 @@
 
       <div class="item item-avatar">
         <img ng-src="img/icons/{{ theEvent.depticon }}" alt="{{ event.value.department }}" />
-        <h2>{{ theEvent.eventName }}</h2>
+        <h2 ng-attr-contenteditable="{{editMode && 'true' || 'false' }}">{{ theEvent.eventName }}</h2>
         <p>{{ theEvent.startDate }} - {{ theEvent.endDate }}</p>
       </div>
 
       <div class="item item-body">
       	<h3>Description</h3>
-        <p>{{ theEvent.description }}</p>
-        <p>Submitted by:  {{ theEvent.chairName }} on {{ theEvent.dateSubmitted }}.</p>
+        <p ng-attr-contenteditable="{{editMode && 'true' || 'false' }}">{{ theEvent.description }}</p>
+        <p>Submitted by:  <span ng-attr-contenteditable="{{editMode && 'true' || 'false' }}">{{ theEvent.chairName }}</span> on <span ng-attr-contenteditable="{{editMode && 'true' || 'false' }}">{{ theEvent.dateSubmitted }}</span>.</p>
         <h3>Location</h3>
         <address>
-        	Building: {{ theEvent.location.building }}<br>
-        	Street: {{ theEvent.location.street }}<br>
-        	City: {{ theEvent.location.city }}
+        	Building: <span ng-attr-contenteditable="{{editMode && 'true' || 'false' }}">{{ theEvent.location.building }}</span><br>
+        	Street: <span ng-attr-contenteditable="{{editMode && 'true' || 'false' }}">{{ theEvent.location.street }}</span><br>
+        	City: <span ng-attr-contenteditable="{{editMode && 'true' || 'false' }}">{{ theEvent.location.city }}</span>
         </address>
         <h3>More Information</h3>
-        <p>Other: {{ theEvent.location.other }}</p>
-        <p>Notes: {{ theEvent.notes }}</p>
-        <p>URL: {{ theEvent.url }}</p>
+        <p>Other: <span<span ng-attr-contenteditable="{{editMode && 'true' || 'false' }}">{{ theEvent.location.other }}</span></p>
+        <p>Notes: <span ng-attr-contenteditable="{{editMode && 'true' || 'false' }}">{{ theEvent.notes }}</span></p>
+        <p>URL: <span ng-attr-contenteditable="{{editMode && 'true' || 'false' }}">{{ theEvent.url }}</span></p>
         <p>
           <a href="#" class="subdued">1 Like</a>
           <a href="#" class="subdued">5 Comments</a>
@@ -48,9 +48,16 @@
           <i class="icon ion-share"></i>
           Share
         </a>
+        <a class="tab-item" ng-click="editMode = true">
+          <i class="icon ion-edit"></i>
+          Edit
+        </a>
       </div>
 
     </div>
+    <a ng-click="saveEvent(theEvent)" ng-class="{'showSave' : editMode, 'button button-block button-royal save': true}">
+      Save
+    </a>
     <a class="button button-block button-positive" ng-click="deleteEvent(theEvent)">
       Delete
     </a>

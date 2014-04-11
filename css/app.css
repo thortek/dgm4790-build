@@ -91,3 +91,26 @@ h2 {line-height: 1.3em;}
 .list .button-bar a {
 	line-height: 25px;
 }
+
+/*
+* Content Editable
+*/
+
+[contenteditable="true"] {
+	background:#c2c2c2;
+}
+
+.save {
+	min-height: 0px;
+	max-height: 0px;
+	opacity: 0;
+	-webkit-transition-property:opacity, max-height;
+	-webkit-transition-duration:.15s, .3s;
+	-webkit-transition-delay:0s,.15s;
+}
+
+.save.showSave {
+
+	opacity: 1;
+	max-height: 50px;
+}
