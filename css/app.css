@@ -95,3 +95,14 @@ h2 {line-height: 1.3em;}
 .list .button-bar a {
 	line-height: 25px;
 }
+
+.button.button-positive {
+
+color: #fff;
+    background-color: #559836;
+    border-color: #497136;
+}
+.button.button-positive.active, .button.button-positive:active {
+      background-color: #497136;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.15);
+      border-color: #497136; }
