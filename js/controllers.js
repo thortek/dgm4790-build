@@ -14,7 +14,7 @@ angular.module('starter.controllers', [])
   console.log('Regster fired');
 })
 
-.controller('deanCtrl', function($scope, eventService, tempDataService, $stateParams, $ionicActionSheet, $state) {
+.controller('deanCtrl', function($scope, eventService, tempDataService, $stateParams, $ionicActionSheet, $state, updateEvent) {
 
 
     var events = eventService.getEvents(); //Create events from eventService service
@@ -50,13 +50,10 @@ angular.module('starter.controllers', [])
               var id =  deleteEvent._id;
               var rev =  deleteEvent._rev;
 
-
               console.log(id);
               console.log(rev);
 
-
               var removeEvent = eventService.deleteEvent(id, rev);
-
 
               removeEvent.delete()
               $state.go('dean.events', [''], {reload:true});
@@ -66,6 +63,18 @@ angular.module('starter.controllers', [])
            }
          });
     };
+
+    $scope.editEvent = function(editEvent) {
+      var eventUpdate = updateEvent; // Get the resource object from the updateEvent service;
+      eventUpdate.update({id:editEvent._id}, editEvent);
+    };
+
+    $scope.editEvent2 = function(theevent) {
+      $scope.$apply()
+      console.log(theevent);
+    }
+
+
 }).controller('addEventCtrl', ['$scope', '$resource', 'eventService', function($scope, $resource, eventService){
 
   $scope.event = {}; //initiate the empty object that will house data being sent to cloudant.

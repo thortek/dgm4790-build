@@ -104,4 +104,9 @@ angular.module('starter.services', ['ngResource'])
             }
 
         };
-    });
+    }).factory('updateEvent', ['$resource', function($resource){
+       return $resource('http://uvutest.learningcomponents.com/api/event/:id', null,
+       {
+           'update': { method:'PUT' }
+       });
+    }]);
