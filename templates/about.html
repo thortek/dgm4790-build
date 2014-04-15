@@ -29,8 +29,31 @@
               Dean Radar Developed by:
           </div>
           <ul class="list">
-            <li class="item">Chad Watkins</li>
-            <li class="item">Dayton Rohner</li>
+            <li class="item" ng-click="toggle = !toggle">Chad Watkins <i class="icon ion-information-circled" ng-hide="toggle"></i>
+              <div ng-hide="toggle"> </div>
+              <div ng-show="toggle" ng-class="{selected: $index==selectedIndex}" class="item item-thumbnail-left">
+                  
+                    <img src="../img/pics/dayton.JPG">
+                  
+                  <h3>Team: <p>Design</p> </h3>
+                  <h3>Portfolio: <a href="http://daytonrohner.com/"><p>blah_blah.com</p></a></h3>
+                  <h3>Email: <p>chad@yahoo.com</p> </h3>
+                  
+              </div>
+            </li>
+
+            <li class="item" ng-click="toggle = !toggle">Dayton Rohner <i class="icon ion-information-circled" ng-hide="toggle"></i>
+              <div ng-hide="toggle"> </div>
+              <div ng-show="toggle" ng-class="{selected: $index==selectedIndex}"  class="item item-thumbnail-left">
+                  
+                    <img src="../img/pics/dayton.JPG">
+                  
+                  <h3>Team: <p>Design</p> </h3>
+                  <h3>Portfolio: <a href="http://daytonrohner.com/"><p>daytonrohner.com</p></a></h3>
+                  <h3>Email: <p>daytonrohner@yahoo.com</p> </h3>
+                  
+              </div>
+            </li>
             <li class="item">James Toney</li>
             <li class="item">Joe Hafen</li>
             <li class="item">John Perl</li>
