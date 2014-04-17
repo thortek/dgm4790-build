@@ -18,17 +18,28 @@
       <div class="item item-body">
       	<h3>Description</h3>
         <p>{{ theEvent.description }}</p>
-        <p>Starts at:  {{ theEvent.startDate }}<br>
-        Ends at:  {{ theEvent.endDate }}</p>
-        <h3>Location</h3>
-        <p>
-        	Building: {{ theEvent.location.building }}, room {{ theEvent.location.room }}<br>
-        	Street: {{ theEvent.location.street }}<br>
-        	City: {{ theEvent.location.city }}, {{ theEvent.location.zip}}
+        <p class="roomN">
+          <b>Room:</b>{{ theEvent.location.building }}{{ theEvent.location.room }}</p>
+        <p><span class="startT">
+            <b>Starts: </b>{{theEvent.startDate | limitTo:5}}<br><span>At:</span> {{theEvent.startTime}}</span>
+          <span class="endT"> <b>Ends: </b>{{ theEvent.endDate | limitTo:5 }}<br><span>At:</span> {{theEvent.endTime}}</span>
+        </p>
+
+        <label class="moreI"><input type="checkbox" ng-model="checked" name="checkbox" value="value"><p>More Information...</p></label>
+        <div class="check-element animate-hide" ng-show="checked">
+          <h3>Location</h3>
+          <p>
+          Building: {{ theEvent.location.building }}, room {{ theEvent.location.room }}<br>
+          Street: {{ theEvent.location.street }}<br>
+          City: {{ theEvent.location.city }}, {{ theEvent.location.zip}}
         </p>
         <h3>More Information</h3>
         <p>Notes: {{ theEvent.notes }}</p>
         <p>URL: {{ theEvent.url }}</p>
+
+
+        </div>
+
 
     </div>
     <a class="button button-block button-assertive" ng-click="deleteEvent(theEvent)">

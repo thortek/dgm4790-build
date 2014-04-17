@@ -106,3 +106,31 @@ color: #fff;
       background-color: #497136;
       box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.15);
       border-color: #497136; }
+
+/*-- Evnt-details--*/
+span.startT{
+	float:left;
+}
+span.endT{
+	float:right;
+}
+span.endT b, span.startT b {
+	color: #444;
+}
+p.roomN {
+	text-align: right;
+}
+p.roomN b{
+	color:#444;
+}
+label.moreI p {
+	float: right;
+	color: #444;
+	margin:0px;
+}
+label.moreI {
+	opacity: 0;
+}
+span.startT span, span.endT span {
+	color: #444;
+}
