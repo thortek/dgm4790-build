@@ -38,6 +38,12 @@
     border-color: #497136;
 }
 
+/*Making Form Validation more visual for viewers. Too bad it isn't supported by ionic. You can still add an event without "required" inputs added
+input:required {
+    background:hsl(180, 50%, 90%);
+    border:1px solid #999;
+}
+*/
 
 /*Add event Department buttons*/
 .depBtn{display: inline-block;margin: 2% 4% 0% 4%;}
