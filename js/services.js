@@ -73,7 +73,7 @@ angular.module('starter.services', ['ngResource'])
                 //The reason for this is, we don't know WHEN it will return, but we know it will eventually.
                 //Read more here: http://docs.angularjs.org/api/ng/service/$q
 
-                //First lets create our defered object.        
+                //First lets create our deferred object.        
                 var tempDataDeferred = $q.defer();
 
                 $http.get('data/tempData.json').success(function(data) {
