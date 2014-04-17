@@ -25,26 +25,26 @@
       </div>
       
       <div class="card">
-          <div class="item item-divider">
-              Dean Radar Developed by:
+          <div class="item item-divider item-icon-right" ng-click="toggle = !toggle">
+              Dean Radar Developed by: <i class="icon ion-information-circled" ng-hide="toggle"></i>
           </div>
           <ul class="list">
-            <li class="item" ng-click="toggle = !toggle">Chad Watkins <i class="icon ion-information-circled" ng-hide="toggle"></i>
+            <li class="item">Chad Watkins 
               <div ng-hide="toggle"> </div>
-              <div ng-show="toggle" ng-class="{selected: $index==selectedIndex}" class="item item-thumbnail-left">
+              <div ng-show="toggle"  class="item item-thumbnail-left">
                   
-                    <img src="../img/pics/dayton.JPG">
+                    <img src="../img/pics/iconperson.png">
                   
                   <h3>Team: <p>Design</p> </h3>
-                  <h3>Portfolio: <a href="http://daytonrohner.com/"><p>blah_blah.com</p></a></h3>
+                  <h3>Portfolio: <a href="h"><p>blah_blah.com</p></a></h3>
                   <h3>Email: <p>chad@yahoo.com</p> </h3>
                   
               </div>
             </li>
 
-            <li class="item" ng-click="toggle = !toggle">Dayton Rohner <i class="icon ion-information-circled" ng-hide="toggle"></i>
+            <li class="item">Dayton Rohner 
               <div ng-hide="toggle"> </div>
-              <div ng-show="toggle" ng-class="{selected: $index==selectedIndex}"  class="item item-thumbnail-left">
+              <div ng-show="toggle"  class="item item-thumbnail-left">
                   
                     <img src="../img/pics/dayton.JPG">
                   
