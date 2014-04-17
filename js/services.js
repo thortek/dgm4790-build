@@ -70,7 +70,7 @@ angular.module('starter.services', ['ngResource'])
         return{
             GetData: function(){
                 //We want to return a promised object.
-                //The reason for this is, we don't know WHEN it will return, but we know it will evenetually.
+                //The reason for this is, we don't know WHEN it will return, but we know it will eventually.
                 //Read more here: http://docs.angularjs.org/api/ng/service/$q
 
                 //First lets create our defered object.        
