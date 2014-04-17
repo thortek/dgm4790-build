@@ -28,7 +28,15 @@
 
 
 /*temp styling*/
-.positive-bg span{color:#fff;}
+.positive-bg span{
+	color:#fff;
+}
+
+.positive-bg {
+	color:#fff;
+    background-color: #559836;
+    border-color: #497136;
+}
 
 
 /*Add event Department buttons*/
@@ -81,6 +89,9 @@ input[type="radio"]{display:none;}
 }
 
 h2 {line-height: 1.3em;}
+
+/*** About Page Styling ***/
+.item.item-divider {background: #559836; border-color: #497136; color: #FFF;}
 
 /*--Menu Icons Styles--*/
 
