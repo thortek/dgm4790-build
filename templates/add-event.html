@@ -3,13 +3,13 @@
         <!-- <list> -->
         <!--Form validation not working, but I added it. Ionic doesn't support HTML stuff like "required" and patterns  -Roo -->
         <!--Choose Department-->
-        <div class="list">
+        <div class="">
             <div class="positive-bg col">
                 <span class="input-label"><i class=" icon ion-grid"></i> Choose Department</span>
             </div>
-            <div class="row deptRow">
-                <div class="col">
-                    <div class="depBtn" ng-repeat="department in departments" ng-class="getClass($index)">
+            <div class="section">
+                <div class="group">
+                    <div class="col span_1_of_3" ng-repeat="department in departments" ng-class="getClass($index)">
                         <div class="{{ department.picabrv }}">
                             <input id="{{ department.abrv }}" type="radio" name="dept" value="{{department.name}}" ng-model="event.department" ng-click="hideUnselected($index)">
                             <label for="{{ department.abrv }}"><span></span></label>
