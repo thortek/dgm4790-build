@@ -79,7 +79,8 @@ input[type="radio"]{display:none;}
 .et input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/etSprite.png") left top no-repeat;}
 .selectedDept .et input[type="radio"] + label span {background: url("../img/icons/etSprite.png") -92px top no-repeat;}
 
-.deptRow{
+.deptRow,
+.section{
 	position:relative;
 	min-height:110px;
 }
@@ -88,14 +89,15 @@ input[type="radio"]{display:none;}
 }
 .selectedDept{
 	position:absolute;
-	top:10px;
-	left:8px;
+	top:0;
+	left:0;
 }
 .cancel{
 	font-size:2em;
 	position:absolute;
-	top:-14px;
-	left:-12px;
+	top:0;
+	left:4px;
+	
 }
 
 h2 {line-height: 1.3em;}
