@@ -94,8 +94,8 @@ angular.module('starter', ['ionic', 'ngCookies', 'starter.services', 'starter.co
         return path + '/?' + params.join('&');
     }); 
 
-    function MainController($scope) {
-  $scope.toggle = true;
-}  
+	function MainController($scope) {
+		$scope.toggle = true;
+	}
 
 });
