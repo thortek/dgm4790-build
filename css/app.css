@@ -52,32 +52,28 @@ input:required {
 /*Add event Department buttons*/
 .depBtn{display: inline-block;margin: 2% 4% 0% 4%;}
 input[type="radio"]{display:none;}
-.at input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/atSprite.png") left top no-repeat;}
-.selectedDept .at input[type="radio"] + label span {background: url("../img/icons/atSprite.png") -92px top no-repeat;}
 
-.dgm input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/dgmSprite.png") left top no-repeat;}
-.selectedDept .dgm input[type="radio"] + label span {background: url("../img/icons/dgmSprite.png") -92px top no-repeat;}
+.at input[type="radio"] + label span {background:url("../img/icons/atSprite.png");}
+.dgm input[type="radio"] + label span {background:url("../img/icons/dgmSprite.png");}
+.ca input[type="radio"] + label span {background:url("../img/icons/caSprite.png");}
+.ct input[type="radio"] + label span {background:url("../img/icons/ctSprite.png");}
+.ist input[type="radio"] + label span {background:url("../img/icons/istSprite.png");}
+.egd input[type="radio"] + label span {background:url("../img/icons/egdSprite.png");}
+.cs input[type="radio"] + label span {background:url("../img/icons/csSprite.png");}
+.tm input[type="radio"] + label span {background:url("../img/icons/tmSprite.png");}
+.et input[type="radio"] + label span {background:url("../img/icons/etSprite.png");}
+.col input[type="radio"] + label span{ 
+	display:inline-block;
+	width:91px;
+	height:91px;
+	background-size:184px 92px;
+	background-position:left top;
+	background-repeat: no-repeat;
+}
 
-.ca input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/caSprite.png") left top no-repeat;}
-.selectedDept .ca input[type="radio"] + label span {background: url("../img/icons/caSprite.png") -92px top no-repeat;}
-
-.ct input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/ctSprite.png") left top no-repeat;}
-.selectedDept .ct input[type="radio"] + label span {background: url("../img/icons/ctSprite.png") -92px top no-repeat;}
-
-.ist input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/istSprite.png") left top no-repeat;}
-.selectedDept .ist input[type="radio"] + label span {background: url("../img/icons/istSprite.png") -92px top no-repeat;}
-
-.egd input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/egdSprite.png") left top no-repeat;}
-.selectedDept .egd input[type="radio"] + label span {background: url("../img/icons/egdSprite.png") -92px top no-repeat;}
-
-.cs input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/csSprite.png") left top no-repeat;}
-.selectedDept .cs input[type="radio"] + label span {background: url("../img/icons/csSprite.png") -92px top no-repeat;}
-
-.tm input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/tmSprite.png") left top no-repeat;}
-.selectedDept .tm input[type="radio"] + label span {background: url("../img/icons/tmSprite.png") -92px top no-repeat;}
-
-.et input[type="radio"] + label span {display:inline-block;width:91px;height:91px;background:url("../img/icons/etSprite.png") left top no-repeat;}
-.selectedDept .et input[type="radio"] + label span {background: url("../img/icons/etSprite.png") -92px top no-repeat;}
+.selectedDept input[type="radio"] + label span{
+	background-position:-92px top;
+}
 
 .deptRow,
 .section{
