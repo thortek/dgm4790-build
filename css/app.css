@@ -107,7 +107,10 @@ input[type="radio"]{display:none;}
 	
 }
 
-h2 {line-height: 1.3em;}
+h2, h3 {line-height: 1.3em;}
+
+.item h3 a p {color: #559836;}
+.item h3 a {text-decoration: none;}
 
 /*** About Page Styling ***/
 .item.item-divider {background: #559836; border-color: #497136; color: #FFF;}
