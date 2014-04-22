@@ -4,15 +4,15 @@ body{
    // margin-top: 15pt;
 }
 /* Adjusting font sizes */
-.card .item h2{
+.list.card .item h2{
 	font-size:1.25em;
 	line-height:1.25em;
 	margin-top:-.25em;
 }
-.card .item h3{
+.list.card .item h3{
 	font-size:1.25em;
 }
-.card .item p{
+.list.card .item p{
 	font-size:1em;
 }
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
