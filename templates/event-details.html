@@ -20,9 +20,9 @@
 
                 <label class="moreI">
                     <input type="checkbox" ng-model="checked" name="checkbox" value="value">
-                    <p style="position:initial;"class="button button-balanced button-block">More Information...</p>
+                    <p style="position:initial;"class="button button-balanced button-block">More Info... <span class="check-element animate-hide" ng-show="checked"> <i class="ion-ios7-arrow-down"/></i> </span><span class="check-element animate-hide" ng-hide="checked"> <i class="ion-ios7-arrow-right"></i> </span></p>
                 </label>
-                <div class="check-element animate-hide" ng-show="checked">
+                <div class="check-element animate-hide" ng-show="checked" >
                     <br>
                     <br>
                     <br>
@@ -42,3 +42,7 @@
         </div>
     </content>
 </view>
+
+
+
+

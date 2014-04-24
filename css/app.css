@@ -172,16 +172,18 @@ span.startT span, span.endT span {
 	color: #444;
 }
 .moreI p {
-	background: #497136;
+	background: #497136!important;
 	padding: 5px;
 	width: 120px;
 	text-align: center;
 	color: #fff!important;
-	border-radius: 2px;
-	cursor:pointer;
+	border-radius: 3px;
+	cursor: pointer;
+	line-height: 36px;
+	border: none;
 }
 .moreI p:hover{
-	background:#3d5d2e;
+	background:#3d5d2e!important;
 }
 .moreI p span {
 	float: right;
