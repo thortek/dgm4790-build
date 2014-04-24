@@ -5,46 +5,43 @@
   navigation history that also transitions its views in and out.
 -->
 <view title="'Hello Mr Dean'">
-  <content has-header="true" has-footer="true">
+    <content has-header="true" has-footer="true">
+        <div class="list card">
+            <div class="item item-avatar">
+                <img ng-src="img/icons/{{ theEvent.depticon }}" alt="{{ event.value.department }}" />
+                <h2>{{ theEvent.eventName }}</h2>
+                <h4 class="startT">{{theEvent.startDate | date:'MMM d, h:mm a' }} - {{ theEvent.endDate | date:'MMM d, h:mm a' }}</h4>
+            </div>
 
-    <div class="list card">
-
-      <div class="item item-avatar">
-        <img ng-src="img/icons/{{ theEvent.depticon }}" alt="{{ event.value.department }}" />
-        <h2>{{ theEvent.eventName }}</h2>
-        <p>{{ theEvent.startDate }}</p>
-      </div>
-
-      <div class="item item-body">
-      	<h3>Description</h3>
-        <p>{{ theEvent.description }}</p>
-        <p class="roomN">
-          <b>Room:</b>{{ theEvent.location.building }}{{ theEvent.location.room }}</p>
-        <p><span class="startT">
-            <b>Starts: </b>{{theEvent.startDate | limitTo:5}}<br><span>At:</span> {{theEvent.startTime}}</span>
-          <span class="endT"> <b>Ends: </b>{{ theEvent.endDate | limitTo:5 }}<br><span>At:</span> {{theEvent.endTime}}</span>
-        </p>
-
-        <label class="moreI"><input type="checkbox" ng-model="checked" name="checkbox" value="value"><p>More Information...</p></label>
-        <div class="check-element animate-hide" ng-show="checked">
-          <h3>Location</h3>
-          <p>
-          Building: {{ theEvent.location.building }}, room {{ theEvent.location.room }}<br>
-          Street: {{ theEvent.location.street }}<br>
-          City: {{ theEvent.location.city }}, {{ theEvent.location.zip}}
-        </p>
-        <h3>More Information</h3>
-        <p>Notes: {{ theEvent.notes }}</p>
-        <p>URL: {{ theEvent.url }}</p>
+            <div class="item item-body">
+                <h3>Description</h3>
+                <div>
+                    <p>{{ theEvent.description }}</p>
 
 
+                </div>
+
+                <label class="moreI">
+                    <input type="checkbox" ng-model="checked" name="checkbox" value="value">
+                    <p style="position:initial;"class="button button-balanced button-block">More Information...</p>
+                </label>
+                <div class="check-element animate-hide" ng-show="checked">
+                    <br>
+                    <br>
+                    <br>
+                    <h3>Location</h3>
+                    <p>Building/room: {{ theEvent.location.building }}{{ theEvent.location.room }}</p>
+                    <p> Street: {{ theEvent.location.street }}</p>
+                    <p> {{"City: " + theEvent.location.city }} {{ theEvent.location.zip}}</p>
+                    <br>
+                    <h3>More Information</h3>
+                    <p>Notes : {{ theEvent.notes }}</p>
+                    <p>URL : {{ theEvent.url }}</p>
+                </div>
+            </div>
+            <a class="button button-block button-assertive" ng-click="deleteEvent(theEvent)">
+                Delete
+            </a>
         </div>
-
-
-    </div>
-    <a class="button button-block button-assertive" ng-click="deleteEvent(theEvent)">
-        Delete
-    </a>
-    
-  </content>
+    </content>
 </view>
