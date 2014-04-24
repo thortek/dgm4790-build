@@ -16,26 +16,27 @@
       </div>
 
       <div class="item item-body">
-      	<h3>Description</h3>
-        <p>{{ theEvent.description }}</p>
-        <p class="roomN">
-          <b>Room:</b>{{ theEvent.location.building }}{{ theEvent.location.room }}</p>
-        <p><span class="startT">
-            <b>Starts: </b>{{theEvent.startDate |date:'MM/dd At: h:mma' }} </span>
-          <span class="endT"> <b>Ends: </b>{{ theEvent.endDate | date:'MM/dd At: h:mma'}}</span>
+      	<span ng-show="theEvent.description"><h3>Description:</h3>
+        <p>{{ theEvent.description }}</p></span>
+        <span ng-show="theEvent.location.room"><p class="roomN">
+          <b>Room: </b>{{ theEvent.location.building }}{{ theEvent.location.room }}</p></span>
+        <span ng-show="theEvent.startDate"><p><span class="startT">
+            <b>Starts: </b>{{theEvent.startDate |date:'MM/dd At: h:mma' }} </span></span>
+         <span ng-show="theEvent.endDate"> <span class="endT"> <b>Ends: </b>{{ theEvent.endDate | date:'MM/dd At: h:mma'}}</span></span>
         </p>
 
         <label class="moreI"><input type="checkbox" ng-model="checked" name="checkbox" value="value"><p>More Info... <span class="check-element animate-hide" ng-show="checked"> <i class="ion-ios7-arrow-down"/></i> </span><span class="check-element animate-hide" ng-hide="checked"> <i class="ion-ios7-arrow-right"></i> </span></p></label>
         <div class="check-element animate-hide" ng-show="checked">
-          <h3>Location</h3>
+         <h3>Location</h3>
           <p>
-          Building: {{ theEvent.location.building }}, room {{ theEvent.location.room }}<br>
-          Street: {{ theEvent.location.street }}<br>
-          City: {{ theEvent.location.city }}, {{ theEvent.location.zip}}
+           <span ng-show="theEvent.location.building">Building: {{ theEvent.location.building }}, room {{ theEvent.location.room }}<br></span>
+          <span ng-show="theEvent.location.street">Street: {{ theEvent.location.street }}<br></span>
+          <span ng-show="theEvent.location.city">City: {{ theEvent.location.city }}, {{ theEvent.location.zip}}</span>
         </p>
         <h3>More Information</h3>
-        <p>Notes: {{ theEvent.notes }}</p>
-        <p>URL: {{ theEvent.url }}</p>
+        <span ng-show="theEvent.notes"><p>Notes: {{ theEvent.notes }}</p></span>
+        <span ng-show="theEvent.url"><p>URL: {{ theEvent.url }}</p></span>
+
 
 
         </div>
