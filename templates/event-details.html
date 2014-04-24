@@ -21,11 +21,11 @@
         <p class="roomN">
           <b>Room:</b>{{ theEvent.location.building }}{{ theEvent.location.room }}</p>
         <p><span class="startT">
-            <b>Starts: </b>{{theEvent.startDate | limitTo:5}}<br><span>At:</span> {{theEvent.startTime}}</span>
-          <span class="endT"> <b>Ends: </b>{{ theEvent.endDate | limitTo:5 }}<br><span>At:</span> {{theEvent.endTime}}</span>
+            <b>Starts: </b>{{theEvent.startDate |date:'MM/dd At: h:mma' }} </span>
+          <span class="endT"> <b>Ends: </b>{{ theEvent.endDate | date:'MM/dd At: h:mma'}}</span>
         </p>
 
-        <label class="moreI"><input type="checkbox" ng-model="checked" name="checkbox" value="value"><p>More Information...</p></label>
+        <label class="moreI"><input type="checkbox" ng-model="checked" name="checkbox" value="value"><p>More Info... <span class="check-element animate-hide" ng-show="checked"> <i class="ion-ios7-arrow-down"/></i> </span><span class="check-element animate-hide" ng-hide="checked"> <i class="ion-ios7-arrow-right"></i> </span></p></label>
         <div class="check-element animate-hide" ng-show="checked">
           <h3>Location</h3>
           <p>
