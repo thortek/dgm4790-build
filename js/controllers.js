@@ -41,37 +41,50 @@ angular.module('starter.controllers', [])
         console.log(error); // show the error
     });
 
-    $scope.deleteEvent = function(deleteEvent) {
-
-         // Show the action sheet
-         $ionicActionSheet.show({
-           destructiveText: 'Delete',
-           titleText: 'Are you sure you want to delete this event?',
-           cancelText: 'Cancel',
-           buttonClicked: function(index) {
-             console.log(index);
-             return true;
-           },
-           destructiveButtonClicked: function() {
-              var id =  deleteEvent._id;
-              var rev =  deleteEvent._rev;
 
 
-              console.log(id);
-              console.log(rev);
 
 
-              var removeEvent = eventService.deleteEvent(id, rev);
+
+       /* console.log(":-----");
+        console.log($scope.$parent.$parent.events[]);
+        console.log("-----:");*/
+       /* console.log(":-----");
+        console.log($scope);
+        console.log("-----:");*/
 
 
-              removeEvent.delete()
-              $state.go('dean.events', [''], {reload:true});
+        $scope.deleteEvent = function(deleteEvent) {
 
-              return true;
+            // Show the action sheet
+            $ionicActionSheet.show({
+                destructiveText: 'Delete',
+                titleText: 'Are you sure you want to delete this event?',
+                cancelText: 'Cancel',
+                buttonClicked: function(index) {
+                    console.log(index);
+                    return true;
+                },
+                destructiveButtonClicked: function() {
+                    var id =  deleteEvent._id;
+                    var rev =  deleteEvent._rev;
 
-           }
-         });
-    };
+
+                    console.log(id);
+                    console.log(rev);
+
+                    var removeEvent = eventService.deleteEvent(id, rev);
+
+
+                    removeEvent.delete()
+
+                    $state.go('dean.events', [''], {reload:true});
+
+                    return true;
+
+                }
+            });
+        };
 }).controller('addEventCtrl', ['$scope', '$resource', 'eventService','$ionicActionSheet','$state', function($scope, $resource, eventService,$ionicActionSheet,$state){
 
   $scope.event = {}; //initiate the empty object that will house data being sent to cloudant.
