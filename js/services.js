@@ -104,4 +104,7 @@ angular.module('starter.services', ['ngResource'])
             }
 
         };
+    })
+    .factory('stats', function($resource) {
+        return $resource('http://uvutest.learningcomponents.com/api/stats');
     });
