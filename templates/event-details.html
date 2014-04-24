@@ -13,10 +13,10 @@
                 <h4 class="startT">{{theEvent.startDate | date:'MMM d, h:mm a' }} - {{ theEvent.endDate | date:'MMM d, h:mm a' }}</h4>
             </div>
             <div class="item item-body">
-                <h3>Description</h3>
+                <span ng-show="theEvent.description"><h3>Description</h3>
                 <div>
                     <p>{{ theEvent.description }}</p>
-                </div>
+                </div></span>
 
                 <label class="moreI">
                     <input type="checkbox" ng-model="checked" name="checkbox" value="value">
@@ -27,13 +27,13 @@
                     <br>
                     <br>
                     <h3>Location</h3>
-                    <p>Building/room: {{ theEvent.location.building }}{{ theEvent.location.room }}</p>
-                    <p> Street: {{ theEvent.location.street }}</p>
-                    <p> {{"City: " + theEvent.location.city }} {{ theEvent.location.zip}}</p>
+                    <span ng-show="theEvent.location.room"><p>Building/room: {{ theEvent.location.building }}{{ theEvent.location.room }}</p></span>
+                    <span ng-show="theEvent.location.street"><p> Street: {{ theEvent.location.street }}</p></span>
+                   <span ng-show="theEvent.location.city"> <p> {{"City: " + theEvent.location.city }} {{ theEvent.location.zip}}</p></span>
                     <br>
                     <h3>More Information</h3>
-                    <p>Notes : {{ theEvent.notes }}</p>
-                    <p>URL : {{ theEvent.url }}</p>
+                    <span ng-show="theEvent.notes"><p>Notes : {{ theEvent.notes }}</p></span>
+                    <span ng-show="theEvent.location.street"><p>URL : {{ theEvent.url }}</p></span>
                 </div>
             </div>
             <a class="button button-block button-assertive" ng-click="deleteEvent(theEvent)">
