@@ -168,6 +168,22 @@ label.moreI {
 span.startT span, span.endT span {
 	color: #444;
 }
+.moreI p {
+	background: #497136;
+	padding: 5px;
+	width: 120px;
+	text-align: center;
+	color: #fff!important;
+	border-radius: 2px;
+	cursor:pointer;
+}
+.moreI p:hover{
+	background:#3d5d2e;
+}
+.moreI p span {
+	float: right;
+	width: 18px;
+}
 
 /* Responsive Test */
 
