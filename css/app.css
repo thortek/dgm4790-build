@@ -117,7 +117,6 @@ h2, h3 {line-height: 1.3em;}
 .item.item-divider {background: #559836; border-color: #497136; color: #FFF;}
 
 /*--Menu Icons Styles--*/
-
 .button .icon {
 	vertical-align: initial;
 }
@@ -130,16 +129,20 @@ h2, h3 {line-height: 1.3em;}
 	line-height: 25px;
 }
 
-.button.button-positive {
+.list .button-bar .button.button-positive {
+    border-radius: 0;
+}
 
-color: #fff;
+.button.button-positive {
+    color: #fff;
     background-color: #559836;
     border-color: #497136;
 }
 .button.button-positive.active, .button.button-positive:active {
       background-color: #497136;
       box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.15);
-      border-color: #497136; }
+      border-color: #497136;
+}
 
 /*-- Evnt-details--*/
 span.startT{
