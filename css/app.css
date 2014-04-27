@@ -97,15 +97,21 @@ input[type="radio"]{display:none;}
 }
 .selectedDept{
 	position:absolute;
-	top:0;
+	top:10px;
 	left:0;
 }
-.cancel{
+input[type="radio"] + label span{
+	position:relative;
+}
+input[type="radio"] + label span.cancel{
 	font-size:2em;
 	position:absolute;
-	top:0;
-	left:4px;
-	
+	top:-7px;
+	left:-4px;
+	display:block;
+	width:auto;
+	height:auto;
+	background:none;
 }
 
 h2, h3 {line-height: 1.3em;}
@@ -195,7 +201,7 @@ span.startT span, span.endT span {
 /*  SECTIONS  */
 .section {
     clear: both;
-    padding: 0px;
+    padding: 10px 0 0 0;
     margin: 0 auto;
     text-align: center;
 }
