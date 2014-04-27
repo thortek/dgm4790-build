@@ -106,8 +106,8 @@ input[type="radio"] + label span{
 input[type="radio"] + label span.cancel{
 	font-size:2em;
 	position:absolute;
-	top:-15px;
-	left:-11px;
+	top:-7px;
+	left:-4px;
 	display:block;
 	width:auto;
 	height:auto;
