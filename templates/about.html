@@ -1,183 +1,147 @@
-<!--
-  This template loads for the 'tab.about' state (app.js)
--->
 <view title="'About Dean Radar'">
-  <content has-header="true" has-tabs="true" padding="true">
-      <div class="card">
-          <div class="item item-divider">
-              How to use Dean Radar
-          </div>
-          <div class="item item-text-wrap">
-              The <i class="icon ion-home"> </i><strong> Events</strong> tab is where to view upcoming events that other department chairs have submitted.
-          </div>
-          <div class="item item-text-wrap">
-              Here you can filter through events by the <i class="icon ion-calendar"></i><strong> Date</strong>, <i class="icon ion-grid"> </i> <strong> Department</strong>, or <i class="icon ion-ios7-flag"></i><strong> Event Name</strong>.
-          </div>
-          <div class="item item-text-wrap">
-              Tapping on an event will bring you to the <i class="icon ion-information-circled"> </i> <strong> Event Detail</strong> section.
-          </div>
-          <div class="item item-text-wrap">
-              If you need to delete the event you're viewing, tap on the <i class="icon ion-close-circled"> </i><strong> Delete</strong> button, then either hit Delete or Cancel to confirm.
-          </div>
-          <div class="item item-text-wrap">
-              The <i class="icon ion-ios7-compose"> </i><strong> Add Event</strong> tab will allow you to create an event for a specific department.
-          </div>
-      </div>
-      
-      <div class="card">
-          <div class="item item-divider item-icon-right" ng-click="toggle = !toggle">
-              Dean Radar Developed by: <i class="icon ion-information-circled"></i>
-          </div>
-          <ul class="list">
-            <li class="item">Chad Watkins</li>
-              <div ng-hide="toggle"> </div>
-              <div ng-show="toggle"  class="item item-thumbnail-left">
-
-                  
-                    <img ng-src="img/pics/iconperson.png">
-                  
-                  <h3>Team: <p>Develop</p> </h3>
-                  <h3>Portfolio: <a href="chadandsarahwatkins.com"><p>chadandsarahwatkins.com</p></a></h3>
-                  <h3>Email: <p>chadwtkns@gmail.com</p> </h3>
-                  
-              </div>
-            
-
-            <li class="item">Dayton Rohner</li> 
-              <div ng-hide="toggle"> </div>
-              <div ng-show="toggle"  class="item item-thumbnail-left">
-                  
-                    <img ng-src="img/pics/dayton.JPG">
-                  
-                  <h3>Team: <p>Design</p> </h3>
-                  <h3>Portfolio: <a ng-href="http://daytonrohner.com/"><p>daytonrohner.com</p></a></h3>
-                  <h3>Email: <p>daytonrohner@yahoo.com</p> </h3>
-                  
-              </div>
-            
-            <li class="item">James Toney</li>
-              <div ng-hide="toggle"> </div>
-              <div ng-show="toggle"  class="item item-thumbnail-left">
-                  
-                    <img ng-src="img/pics/james.png">
-                  
-                  <h3>Team: <p>Develop</p> </h3>
-                  <h3>Portfolio: <a href=""><p>jamesatoney.com</p></a></h3>
-                  <h3>Email: <p>jatoney@hotmail.com</p> </h3>
-                  
-              </div>
-            <li class="item">Joe Hafen</li>
-              <div ng-hide="toggle"> </div>
-              <div ng-show="toggle"  class="item item-thumbnail-left">
-                  
-                    <img ng-src="img/pics/joe.jpg">
-                  
-                  <h3>Team: <p>Design</p> </h3>
-                  <h3>Portfolio: <a href="http://joehafen.com"><p>joehafen.com</p></a></h3>
-                  <h3>Email: <p>joehafen@gmail.com</p> </h3>
-                  
-              </div>
-            <li class="item">John Perl</li>
-              <div ng-hide="toggle"> </div>
-              <div ng-show="toggle"  class="item item-thumbnail-left">
-                  
-                    <img ng-src="img/pics/john.jpg">
-                  
-                  <h3>Team: <p>Design</p> </h3>
-                  <h3>Portfolio: <a href=""><p>johnperl.net</p></a></h3>
-                  <h3>Email: <p>johnrperl@gmail.com</p> </h3>
-                  
-              </div>
-            <li class="item">William Stanton</li>
-              <div ng-hide="toggle"> </div>
-              <div ng-show="toggle"  class="item item-thumbnail-left">
-                  
-                    <img ng-src="img/pics/liam.jpg">
-                  
-                  <h3>Team: <p>Develop</p> </h3>
-                  <h3>Portfolio: <a href="http://www.billynair.com/portfolio.php"><p>billynair.com</p></a></h3>
-                  <h3>Email: <p>10005482@uvlink.uvu.edu</p> </h3>
-                  
-              </div>
-            <li class="item">Nathan Robinson</li>
-              <div ng-hide="toggle"> </div>
-              <div ng-show="toggle"  class="item item-thumbnail-left">
-                  
-                    <img ng-src="img/pics/nate.jpg">
-                  
-                  <h3>Team: <p>Design</p> </h3>
-                  <h3>Portfolio: <a href="http://nathanrobinsondesign.com/"><p>NathanRobinsonDesign.com</p></a></h3>
-                  <h3>Email: <p>nrobinsondesign@gmail.com</p> </h3>
-                  
-              </div>
-            <li class="item">Ryan Martin</li>
-              <div ng-hide="toggle"></div>
-              <div ng-show="toggle" class="item item-thumbnail-left">
-                  
-                    <img ng-src="img/pics/ryan.jpg">
-                  
-                  <h3>Team: <p>Development</p></h3>
-                  <h3>Portfolio: <a href="http://techwolfmedia.com"><p>http://techwolfmedia.com</p></a></h3>
-                  <h3>Email: <p>rmartin@techwolfmedia.com</p> </h3>
-                  
-              </div>
-            <li class="item">Sheresa "Roo" Wight</li>
-              <div ng-hide="toggle"> </div>
-              <div ng-show="toggle"  class="item item-thumbnail-left">
-                  
-                    <img ng-src="img/pics/Roo.jpg">
-                  
-                  <h3>Team: <p>Design</p> </h3>
-                  <h3>Email: <p>roowight@gmail.com</p> </h3>
-                  
-              </div>
-            <li class="item">Talmage Hansen</li>
-              <div ng-hide="toggle"> </div>
-              <div ng-show="toggle"  class="item item-thumbnail-left">
-                  
-                    <img ng-src="img/pics/Talmage.jpg">
-                  
-                  <h3>Team: <p>Design</p> </h3>
-                  <h3>Portfolio: <a href=""><p>talmagehansen.com</p></a></h3>
-                  <h3>Email: <p>talmazing@gmail.com</p> </h3>
-                  
-              </div>
-            <li class="item">Thor Anderson</li>
-              <div ng-hide="toggle"> </div>
-              <div ng-show="toggle"  class="item item-thumbnail-left">
-                  
+    <content has-header="true" has-tabs="true" padding="true">
+        <div class="card">
+            <div class="item item-divider">
+                How to use Dean Radar
+            </div>
+            <div class="item item-text-wrap">
+                <i class="icon ion-home"> </i><strong> Events</strong> is where you can view upcoming events that other department chairs have submitted.
+            </div>
+            <div class="item item-text-wrap">
+                You can filter the events by <i class="icon ion-calendar"></i><strong> Date</strong>, <i class="icon ion-grid"> </i> <strong> Department</strong>, or <i class="icon ion-ios7-flag"></i><strong> Event Name</strong>.
+            </div>
+            <div class="item item-text-wrap">
+                Tapping on an event will bring you to the <i class="icon ion-information-circled"> </i> <strong> Event Detail</strong> section.
+            </div>
+            <div class="item item-text-wrap">
+                If you need to delete the event you're viewing, tap on the <i class="icon ion-close-circled"> </i><strong> Delete</strong> button, then either hit Delete or Cancel to confirm.
+            </div>
+            <div class="item item-text-wrap">
+                <i class="icon ion-ios7-compose"></i><strong> Add Event</strong> will allow you to create an event for a specific department.
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="item item-divider item-icon-right" ng-click="toggle = !toggle">
+                Dean Radar Development Team <i class="icon ion-information-circled"></i>
+            </div>
+            <ul class="list">
+                <li class="item">Thor Anderson</li>
+                <div ng-hide="toggle"> </div>
+                <div ng-show="toggle"  class="item item-thumbnail-left">
                     <img ng-src="img/pics/thor2.jpg">
-                  
-                  <h3>Team: <p>Awesome Professor!</p> </h3>
-                  <h3>Portfolio: <a href="http://www.uvu.edu/profpages/profiles/show/user_id/139">
-                      <p>Professional Page</p></a></h3>
-                  <h3>Email: <p>thor.anderson@uvu.edu</p> </h3>
-                  
-              </div>
-            <li class="item">Todd Goates</li>
-              <div ng-hide="toggle"> </div>
-              <div ng-show="toggle"  class="item item-thumbnail-left">
-                  
-                    <img ng-src="img/pics/todd.jpg">
-                  
-                  <h3>Team: <p>Design</p> </h3>
-                  <h3>Portfolio: <a href="http://toddgoates.com"><p>toddgoates.com</p></a></h3>
-                  <h3>Email: <p>toddgoates@gmail.com</p> </h3>
-                  
-              </div>
-            <li class="item">Tyler Maynard</li>
-            <div ng-hide="toggle"> </div>
-              <div ng-show="toggle"  class="item item-thumbnail-left">
-                  
+                    <h3>Team: <p>Awesome Professor!</p> </h3>
+                    <h3>Portfolio: <a href="http://www.uvu.edu/profpages/profiles/show/user_id/139"><p>Professional Page</p></a></h3>
+                    <h3>Email: <p>thor.anderson@uvu.edu</p> </h3>
+                </div>
+                
+                <li class="item">Chad Watkins</li>
+                <div ng-hide="toggle"> </div>
+                <div ng-show="toggle"  class="item item-thumbnail-left">  
+                    <img ng-src="img/pics/iconperson.png">
+                    <h3>Team: <p>Develop</p> </h3>
+                    <h3>Portfolio: <a href="chadandsarahwatkins.com"><p>chadandsarahwatkins.com</p></a></h3>
+                    <h3>Email: <p>chadwtkns@gmail.com</p> </h3>
+                </div>
+                
+                <li class="item">James Toney</li>
+                <div ng-hide="toggle"> </div>
+                <div ng-show="toggle"  class="item item-thumbnail-left">  
+                    <img ng-src="img/pics/james.png">
+                    <h3>Team: <p>Develop</p> </h3>
+                    <h3>Portfolio: <a href=""><p>jamesatoney.com</p></a></h3>
+                    <h3>Email: <p>jatoney@hotmail.com</p> </h3>  
+                </div>
+              
+                <li class="item">Ryan Martin</li>
+                <div ng-hide="toggle"></div>
+                <div ng-show="toggle" class="item item-thumbnail-left"> 
+                    <img ng-src="img/pics/ryan.jpg">
+                    <h3>Team: <p>Development</p></h3>
+                    <h3>Portfolio: <a href="http://techwolfmedia.com"><p>http://techwolfmedia.com</p></a></h3>
+                    <h3>Email: <p>rmartin@techwolfmedia.com</p> </h3>
+                </div>
+              
+                <li class="item">Tyler Maynard</li>
+                <div ng-hide="toggle"> </div>
+                <div ng-show="toggle"  class="item item-thumbnail-left">
                     <img ng-src="img/pics/tyler.png">
-                  
-                  <h3>Team: <p>Develop</p> </h3>
-                  <h3>Portfolio: <a href="http://www.tylersdesk.com"><p>www.tylersdesk.com</p></a></h3>
-                  <h3>Email: <p>tymayn@gmail.com</p> </h3>
-                  
-              </div>
-          </ul>
-      </div>
+                    <h3>Team: <p>Develop</p> </h3>
+                    <h3>Portfolio: <a href="http://www.tylersdesk.com"><p>www.tylersdesk.com</p></a></h3>
+                    <h3>Email: <p>tymayn@gmail.com</p> </h3>
+                </div>
+              
+                <li class="item">William Stanton</li>
+                <div ng-hide="toggle"> </div>
+                <div ng-show="toggle"  class="item item-thumbnail-left">
+                    <img ng-src="img/pics/liam.jpg">
+                    <h3>Team: <p>Develop</p> </h3>
+                    <h3>Portfolio: <a href="http://www.billynair.com/portfolio.php"><p>billynair.com</p></a></h3>
+                    <h3>Email: <p>10005482@uvlink.uvu.edu</p> </h3>
+                </div>
 
-  </content>
+                <li class="item">Dayton Rohner</li> 
+                <div ng-hide="toggle"> </div>
+                <div ng-show="toggle"  class="item item-thumbnail-left">
+                    <img ng-src="img/pics/dayton.JPG">
+                    <h3>Team: <p>Design</p> </h3>
+                    <h3>Portfolio: <a ng-href="http://daytonrohner.com/"><p>daytonrohner.com</p></a></h3>
+                    <h3>Email: <p>daytonrohner@yahoo.com</p> </h3>
+                </div>
+            
+                <li class="item">Joe Hafen</li>
+                <div ng-hide="toggle"> </div>
+                <div ng-show="toggle"  class="item item-thumbnail-left">
+                    <img ng-src="img/pics/joe.jpg">
+                    <h3>Team: <p>Design</p> </h3>
+                    <h3>Portfolio: <a href="http://joehafen.com"><p>joehafen.com</p></a></h3>
+                    <h3>Email: <p>joehafen@gmail.com</p> </h3>
+                </div>
+                
+                <li class="item">John Perl</li>
+                <div ng-hide="toggle"> </div>
+                <div ng-show="toggle"  class="item item-thumbnail-left">
+                    <img ng-src="img/pics/john.jpg">
+                    <h3>Team: <p>Design</p> </h3>
+                    <h3>Portfolio: <a href=""><p>johnperl.net</p></a></h3>
+                    <h3>Email: <p>johnrperl@gmail.com</p> </h3> 
+                </div>
+
+                <li class="item">Nathan Robinson</li>
+                <div ng-hide="toggle"> </div>
+                <div ng-show="toggle"  class="item item-thumbnail-left">
+                    <img ng-src="img/pics/nate.jpg">
+                    <h3>Team: <p>Design</p> </h3>
+                    <h3>Portfolio: <a href="http://nathanrobinsondesign.com/"><p>NathanRobinsonDesign.com</p></a></h3>
+                    <h3>Email: <p>nrobinsondesign@gmail.com</p> </h3> 
+                </div>
+
+                <li class="item">Sheresa "Roo" Wight</li>
+                <div ng-hide="toggle"> </div>
+                <div ng-show="toggle"  class="item item-thumbnail-left"> 
+                    <img ng-src="img/pics/Roo.jpg">
+                    <h3>Team: <p>Design</p> </h3>
+                    <h3>Email: <p>roowight@gmail.com</p> </h3>
+                </div>
+                
+                <li class="item">Talmage Hansen</li>
+                <div ng-hide="toggle"> </div>
+                <div ng-show="toggle"  class="item item-thumbnail-left">
+                    <img ng-src="img/pics/Talmage.jpg">
+                    <h3>Team: <p>Design</p> </h3>
+                    <h3>Portfolio: <a href=""><p>talmagehansen.com</p></a></h3>
+                    <h3>Email: <p>talmazing@gmail.com</p> </h3> 
+                </div>
+            
+                <li class="item">Todd Goates</li>
+                <div ng-hide="toggle"> </div>
+                <div ng-show="toggle"  class="item item-thumbnail-left"> 
+                    <img ng-src="img/pics/todd.jpg">
+                    <h3>Team: <p>Design</p> </h3>
+                    <h3>Portfolio: <a href="http://toddgoates.com"><p>toddgoates.com</p></a></h3>
+                    <h3>Email: <p>toddgoates@gmail.com</p> </h3>
+                </div>
+            </ul>
+        </div>
+    </content>
 </view>
