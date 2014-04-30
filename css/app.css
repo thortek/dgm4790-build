@@ -141,6 +141,7 @@ h2, h3 {line-height: 1.3em;}
 
 .button.button-positive {
     color: #fff;
+    font-size: 1em;
     background-color: #559836;
     border-color: #497136;
 }
