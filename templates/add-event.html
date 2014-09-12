@@ -1,15 +1,15 @@
 <view title="'Add-Event'">
     <content has-header="true" has-tabs="true" has-footer="true">
         <!-- <list> -->
-
+        <!--Form validation not working, but I added it. Ionic doesn't support HTML stuff like "required" and patterns  -Roo -->
         <!--Choose Department-->
-        <div class="list">
+        <div class="">
             <div class="positive-bg col">
                 <span class="input-label"><i class=" icon ion-grid"></i> Choose Department</span>
             </div>
-            <div class="row deptRow">
-                <div class="col">
-                    <div class="depBtn" ng-repeat="department in departments" ng-class="getClass($index)">
+            <div class="section">
+                <div class="group">
+                    <div class="col span_1_of_3" ng-repeat="department in departments" ng-class="getClass($index)">
                         <div class="{{ department.picabrv }}">
                             <input id="{{ department.abrv }}" type="radio" name="dept" value="{{department.name}}" ng-model="event.department" ng-click="hideUnselected($index)">
                             <label for="{{ department.abrv }}"><span></span></label>
@@ -28,7 +28,7 @@
                 </div>
                 <div class="row">
                     <label class="item item-input col">
-                        <input class="item-content" type="text" placeholder="Event-a-thon" ng-model="event.eventName">
+                        <input class="item-content" type="text" placeholder="Event-a-thon" ng-model="event.eventName" required>
                     </label>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                 <span class="input-label"><i class="icon ion-edit"></i> Event Description</span>
             </div>
             <div class="row">
-                <label class="item item-input col">
+                <label class="item item-input col" required>
 
                     <textarea placeholder="Description" ng-model="event.description"></textarea>
                 </label>
@@ -75,7 +75,7 @@
                     <input type="text" ng-model="event.location.building" placeholder="Building">
                 </label>
                 <label for="" class="item item-input col">
-                    <input type="text" ng-model="event.location.room" placeholder="Room">
+                    <input type="text" ng-model="event.location.room" placeholder="Room" maxlength="6">
                 </label>
             </div>
             <div class="row">
@@ -88,7 +88,7 @@
                     <input type="text" ng-model="event.location.city" placeholder="City">
                 </label>
                 <label for="" class="item item-input col">
-                    <input type="text" ng-model="event.location.zip" placeholder="Zip">
+                    <input type="text" ng-model="event.location.zip" placeholder="Zip" maxlength="5" pattern = "[0-9]{5}">
                 </label>
             </div>
         </div>
@@ -98,7 +98,7 @@
             </div>
             <div class="row">
                 <label for="" class="item item-input col">
-                    <input type="text" ng-model="event.url" placeholder="url">
+                    <input type="url" ng-model="event.url" placeholder="http://">
                 </label>
             </div>
             <div class="row">
@@ -109,7 +109,7 @@
             <!-- </list> -->
             <div class="list">
                 <div class="row">
-                    <button class="button button-block button-balanced" ng-click="submitEvent()">Create Event</button>
+                    <button class="button button-block button-positive" ng-click="submitEvent()">Create Event</button>
                 </div>
             </div>
         </div>

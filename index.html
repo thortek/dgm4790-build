@@ -15,7 +15,7 @@
   <!-- 
     'starter' is the name of this angular module (js/app.js)
   -->
-  <body ng-app="starter" animation="slide-left-right-ios7">
+  <body ng-app="starter" ng-cloak class="ng-cloak" animation="slide-left-right-ios7">
 
     <!-- 
       The nav bar that will be updated as we navigate between views
@@ -34,7 +34,6 @@
       have templates inline in this html file if you'd like).
     -->
     <nav-view>
-      default state
     </nav-view>
 
 
@@ -50,7 +49,7 @@
 
 
     <!-- cordova script  -->
-    <script src="cordova.js"></script>
+    <script src="phonegap.js"></script>
 
     <!-- your app's script -->
     <script src="js/routingConfig.js"></script>

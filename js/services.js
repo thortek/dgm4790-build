@@ -70,10 +70,10 @@ angular.module('starter.services', ['ngResource'])
         return{
             GetData: function(){
                 //We want to return a promised object.
-                //The reason for this is, we don't know WHEN it will return, but we know it will evenetually.
+                //The reason for this is, we don't know WHEN it will return, but we know it will eventually.
                 //Read more here: http://docs.angularjs.org/api/ng/service/$q
 
-                //First lets create our defered object.        
+                //First lets create our deferred object.        
                 var tempDataDeferred = $q.defer();
 
                 $http.get('data/tempData.json').success(function(data) {
@@ -93,7 +93,7 @@ angular.module('starter.services', ['ngResource'])
         // Resource that points directly to all events
         return {
             getEvents : function() {
-                return $resource('http://uvutest.learningcomponents.com/api/events', {});
+                return $resource('http://uvutest.learningcomponents.com/api/events/', {});
             },
             addEvent :  function() {
                 return $resource('http://uvutest.learningcomponents.com/api/addevent');
